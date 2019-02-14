@@ -18,23 +18,37 @@ class Contact extends React.Component {
               <br />
               <List.Item>
                 <List.Content>
-                  <Icon name="linkedin" color="blue" />
-                  <List.Header>Linkedin</List.Header>
+                  <a href="https://www.linkedin.com/in/damian-s-917830a2/">
+                    <Icon
+                      name="linkedin"
+                      color="blue"
+                      size="huge"
+                      title="LinkedIn"
+                    />
+                  </a>
                 </List.Content>
               </List.Item>
               <br />
               <List.Item>
                 <List.Content>
-                  <Icon name="github" />
-                  <List.Header>Github</List.Header>
+                  <a href="https://github.com/damianszn">
+                    <Icon
+                      name="github"
+                      size="huge"
+                      title="Github"
+                      color="black"
+                    />
+                  </a>
                 </List.Content>
               </List.Item>
               <br />
               <List.Item>
                 <List.Content>
-                  <Icon name="mail" color="red" />
-                  <List.Header>damian.kilian.szn@gmail.com</List.Header>
+                  <a href="mailto:damian.kilian.szn@gmail.com">
+                    <Icon name="mail" color="red" size="huge" />
+                  </a>
                 </List.Content>
+                <List.Header>damian.kilian.szn@gmail.com</List.Header>
               </List.Item>
             </List>
           </Segment>

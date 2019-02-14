@@ -10,11 +10,18 @@ import {
   skillsListItems,
   skillsDescription
 } from "./componentStyle.js";
+import { skillsTranslate } from "../languages";
 
-class Skills extends React.Component {
+export default class Skills extends React.Component {
   render() {
-    return (
-      <div style={displayDiv}>
+    let skillsDisplay = "Error";
+    if (this.props.lang === "fr") {
+      skillsDisplay = skillsTranslate.fr;
+    } else if (this.props.lang === "pl") {
+      skillsDisplay = skillsTranslate.pl;
+    } else {
+      console.log(this.props.lang);
+      skillsDisplay = (
         <Jumbotron style={displayContainer}>
           <Menu vertical style={skillsMenu}>
             <Menu.Item name="coding">
@@ -72,14 +79,13 @@ class Skills extends React.Component {
             </Menu.Item>
           </Menu>
           <Message
-            header="Confused?"
-            content="Hover on the icons to display name or details, click on the names to see their website."
+            header="Confused ?"
+            content="Keep your mouse on icons to get more details. The tools have links to their websites."
             style={skillsDescription}
           />
         </Jumbotron>
-      </div>
-    );
+      );
+    }
+    return <div style={displayDiv}> {skillsDisplay} </div>;
   }
 }
-
-export default Skills;

@@ -10,19 +10,61 @@ import HeaderComp from "./HeaderComp";
 import FooterComp from "./FooterComp";
 
 class Presentation extends React.Component {
+  state = { language: "en" };
+
+  changeLanguage = n => {
+    //1: english, 2: french, 3: polish
+    if (n === 1) {
+      this.setState({
+        language: "en"
+      });
+    } else if (n === 2) {
+      this.setState({
+        language: "fr"
+      });
+    } else if (n === 3) {
+      this.setState({
+        language: "pl"
+      });
+    }
+  };
+
   render() {
     return (
       <div>
-        <HeaderComp />
+        <HeaderComp lang={this.state.language} />
 
         <Switch>
-          <Route exact path="/" component={Display} />
-          <Route path="/skills" component={Skills} />
-          <Route path="/experience" component={Experience} />
-          <Route path="/contact" component={Contact} />
+          <Route
+            exact
+            path="/"
+            /* component={Display}
+            lang={this.state.language} */
+            render={() => <Display lang={this.state.language} />}
+          />
+          <Route
+            path="/skills"
+            /* component={Skills} lang={this.state.language} */
+            render={() => <Skills lang={this.state.language} />}
+          />
+          <Route
+            path="/experience"
+            /* component={Experience}
+            lang={this.state.language} */
+            render={() => <Experience lang={this.state.language} />}
+          />
+          <Route
+            path="/contact"
+            /* component={Contact}
+            lang={this.state.language} */
+            render={() => <Contact lang={this.state.language} />}
+          />
         </Switch>
 
-        <FooterComp />
+        <FooterComp
+          lang={this.state.language}
+          changeLang={this.changeLanguage}
+        />
       </div>
     );
   }

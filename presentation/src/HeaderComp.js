@@ -1,16 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-/* import Display from "./components/Display";
-import Skills from "./components/Skills";
-import CV from "./components/CV";
-import Contact from "./components/Contact"; */
-
 import { Header, Icon, List, Segment } from "semantic-ui-react";
 import { header, headerDiv, navbar } from "./style";
 
+import { headerTitles } from "./languages";
+
 class HeaderComp extends React.Component {
   render() {
+    let navbarTitles = {
+      skills: "Skills",
+      experience: "Experience",
+      contact: "Contact"
+    };
+    if (this.props.lang === "fr") {
+      navbarTitles = headerTitles.fr;
+    } else if (this.props.lang === "pl") {
+      navbarTitles = headerTitles.pl;
+    }
     return (
       <div as="header" style={headerDiv}>
         <Segment>
@@ -22,21 +29,15 @@ class HeaderComp extends React.Component {
           </Header>
           <List bulleted horizontal style={navbar}>
             <List.Item>
-              <Link to="/skills">Skills</Link>
+              <Link to="/skills">{navbarTitles.skills}</Link>
             </List.Item>
             <List.Item>
-              <Link to="/experience">Experience</Link>
+              <Link to="/experience">{navbarTitles.experience}</Link>
             </List.Item>
             <List.Item>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact">{navbarTitles.contact}</Link>
             </List.Item>
           </List>
-          {/* <Switch>
-            <Route exact path="/home" component={Display} />
-            <Route path="/skills" component={Skills} />
-            <Route path="/cv" component={CV} />
-            <Route path="/contact" component={Contact} />
-          </Switch> */}
         </Segment>
       </div>
     );

@@ -62,6 +62,10 @@ export const languagesDiv = {
   margin: 0
 };
 
+export const languagesFlags = {
+  cursor: "pointer"
+}
+
 export const updateDate = {
   float: "right",
 

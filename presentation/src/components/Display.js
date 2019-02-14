@@ -10,9 +10,26 @@ import {
   displayImage,
   displayText
 } from "./componentStyle.js";
+import { displayTextTranslate } from "../languages";
 
 class Display extends React.Component {
   render() {
+    let displayP = (
+      <p>
+        I'm using this website as a way to practice my skills and display them.
+        I plan to use it as a Portfolio/Vcard in the future and will try to keep
+        it up to date. It's not responsive yet.
+        <br />
+        <Icon name="window minimize outline" />
+        <br />I made it mostly with React and Semantic-UI.
+      </p>
+    );
+    if (this.props.lang === "fr") {
+      displayP = displayTextTranslate.fr;
+    } else if (this.props.lang === "pl") {
+      displayP = displayTextTranslate.pl;
+    }
+
     return (
       <div style={displayDiv}>
         <Jumbotron style={displayContainer}>
@@ -23,14 +40,7 @@ class Display extends React.Component {
           <br />
           <Segment style={displayText}>
             <br />
-            <p>
-              I'm using this website as a way to practice my skills and display
-              them. I plan to use it as a Portfolio/Vcard in the future and will
-              try to keep it up to date. It's not responsive yet.
-              <br />
-              <Icon name="window minimize outline" />
-              <br />I made it mostly with React and Semantic-UI.
-            </p>
+            {displayP}
           </Segment>
         </Jumbotron>
       </div>
