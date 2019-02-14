@@ -64,9 +64,9 @@ export const languagesDiv = {
 
 export const languagesFlags = {
   cursor: "pointer"
-}
+};
 
-export const updateDate = {
+export const repoLink = {
   float: "right",
 
   color: "#grey"

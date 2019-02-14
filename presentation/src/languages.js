@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "semantic-ui-react";
-import { updateDate } from "./style";
+import { repoLink } from "./style";
 
 //Header
 
@@ -21,15 +21,25 @@ export const headerTitles = {
 
 export const footerUpdate = {
   fr: (
-    <p style={updateDate}>
-      <Icon name="save" color="grey" />
-      Dernière mise à jour : 14-02-2019
+    <p style={repoLink}>
+      <a
+        title="Clique ici pour voir le repo de ce projet."
+        href="https://github.com/damianszn/Presentation"
+      >
+        <Icon name="github" color="grey" />
+        https://github.com/damianszn/Presentation
+      </a>
     </p>
   ),
   pl: (
-    <p style={updateDate}>
-      <Icon name="save" color="grey" />
-      Ostatnia aktualizacja : 14-02-2019
+    <p style={repoLink}>
+      <a
+        title="Kliknij tu zeby zobaczyc repository tego projektu."
+        href="https://github.com/damianszn/Presentation"
+      >
+        <Icon name="github" color="grey" />
+        https://github.com/damianszn/Presentation
+      </a>
     </p>
   )
 };

@@ -1,16 +1,21 @@
 import React from "react";
 
 import { Segment, Flag, Icon } from "semantic-ui-react";
-import { footer, languagesDiv, updateDate, languagesFlags } from "./style";
+import { footer, languagesDiv, repoLink, languagesFlags } from "./style";
 
 import { footerUpdate } from "./languages";
 
 class FooterComp extends React.Component {
   render() {
     let footerText = (
-      <p style={updateDate}>
-        <Icon name="save" color="grey" />
-        Last update : 14-02-2019
+      <p style={repoLink}>
+        <a
+          title="Click here to see this project repository."
+          href="https://github.com/damianszn/Presentation"
+        >
+          <Icon name="github" color="grey" />
+          https://github.com/damianszn/Presentation
+        </a>
       </p>
     );
     if (this.props.lang === "fr") {
