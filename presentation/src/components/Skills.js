@@ -21,11 +21,25 @@ export default class Skills extends React.Component {
       skillsDisplay = skillsTranslate.pl;
     } else {
       console.log(this.props.lang);
-      skillsDisplay = (
+      skillsDisplay = {
+        coding: "Coding",
+        tools: "Tools",
+        languages: "Languages",
+        flag1: "Mastered",
+        flag2: "Business level",
+        flag3: "Native tongue",
+        flag4: "Beginner",
+        msgTitle: "Confused ?",
+        msgText:
+          "Keep your mouse on icons to get more details. The tools have links to their websites."
+      };
+    }
+    return (
+      <div style={displayDiv}>
         <Jumbotron style={displayContainer}>
           <Menu vertical style={skillsMenu}>
             <Menu.Item name="coding">
-              <Header as="h4">Coding</Header>
+              <Header as="h4">{skillsDisplay.coding}</Header>
               <ul style={skillsList}>
                 <li style={skillsListItems} title="React.js">
                   <Icon loading name="react" size="large" color="blue" />
@@ -46,7 +60,7 @@ export default class Skills extends React.Component {
             </Menu.Item>
 
             <Menu.Item name="tools">
-              <Header as="h4">Tools</Header>
+              <Header as="h4">{skillsDisplay.tools}</Header>
               <ul style={skillsList}>
                 <li style={skillsListItems}>
                   <a href="https://github.com/">Github</a>
@@ -61,31 +75,30 @@ export default class Skills extends React.Component {
             </Menu.Item>
 
             <Menu.Item name="languages">
-              <Header as="h4">Languages</Header>
+              <Header as="h4">{skillsDisplay.languages}</Header>
               <ul style={skillsList}>
-                <li style={skillsListItems} title="Mastered">
+                <li style={skillsListItems} title={skillsDisplay.flag1}>
                   <Flag name="france" />
                 </li>
-                <li style={skillsListItems} title="Business level">
+                <li style={skillsListItems} title={skillsDisplay.flag2}>
                   <Flag name="gb" />
                 </li>
-                <li style={skillsListItems} title="Native tongue">
+                <li style={skillsListItems} title={skillsDisplay.flag3}>
                   <Flag name="pl" />
                 </li>
-                <li style={skillsListItems} title="Beginner">
+                <li style={skillsListItems} title={skillsDisplay.flag4}>
                   <Flag name="nl" />
                 </li>
               </ul>
             </Menu.Item>
           </Menu>
           <Message
-            header="Confused ?"
-            content="Keep your mouse on icons to get more details. The tools have links to their websites."
+            header={skillsDisplay.msgTitle}
+            content={skillsDisplay.msgText}
             style={skillsDescription}
           />
         </Jumbotron>
-      );
-    }
-    return <div style={displayDiv}> {skillsDisplay} </div>;
+      </div>
+    );
   }
 }

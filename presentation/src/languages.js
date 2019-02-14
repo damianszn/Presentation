@@ -1,28 +1,6 @@
 import React from "react";
-import {
-  Icon,
-  Message,
-  Header,
-  Menu,
-  Flag,
-  List,
-  Segment
-} from "semantic-ui-react";
-import { Jumbotron } from "reactstrap";
+import { Icon } from "semantic-ui-react";
 import { updateDate } from "./style";
-import {
-  skillsDescription,
-  skillsList,
-  skillsListItems,
-  skillsMenu,
-  displayContainer,
-  educationHeaders,
-  educationList,
-  educationListElements,
-  experienceDiv,
-  experienceContainer,
-  educationText
-} from "./components/componentStyle";
 
 //Header
 
@@ -57,8 +35,6 @@ export const footerUpdate = {
 };
 
 ////////COMPONENTS//////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
 
 //Display
 
@@ -89,139 +65,32 @@ export const displayTextTranslate = {
 };
 
 //Skills////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
 
 export const skillsTranslate = {
-  fr: (
-    <Jumbotron style={displayContainer}>
-      <Menu vertical style={skillsMenu}>
-        <Menu.Item name="coding">
-          <Header as="h4">Code</Header>
-          <ul style={skillsList}>
-            <li style={skillsListItems} title="React.js">
-              <Icon loading name="react" size="large" color="blue" />
-            </li>
-            <li style={skillsListItems} title="HTML5">
-              <Icon name="html5" size="large" color="red" />
-            </li>
-            <li style={skillsListItems} title="CSS3">
-              <Icon name="css3" size="large" color="blue" />
-            </li>
-            <li style={skillsListItems} title="Javascript">
-              <Icon name="js" size="large" color="yellow" />
-            </li>
-            <li style={skillsListItems} title="Node.js">
-              <Icon loading name="node js" size="large" color="green" />
-            </li>
-          </ul>
-        </Menu.Item>
-
-        <Menu.Item name="tools">
-          <Header as="h4">Outils</Header>
-          <ul style={skillsList}>
-            <li style={skillsListItems}>
-              <a href="https://github.com/">Github</a>
-            </li>
-            <li style={skillsListItems}>
-              <a href="https://code.visualstudio.com/">VS Code</a>
-            </li>
-            <li style={skillsListItems}>
-              <a href="https://www.mongodb.com/">MongoDB</a>
-            </li>
-          </ul>
-        </Menu.Item>
-
-        <Menu.Item name="languages">
-          <Header as="h4">Langues</Header>
-          <ul style={skillsList}>
-            <li style={skillsListItems} title="Maîtrisé">
-              <Flag name="france" />
-            </li>
-            <li style={skillsListItems} title="Bon niveau">
-              <Flag name="gb" />
-            </li>
-            <li style={skillsListItems} title="Langue maternelle">
-              <Flag name="pl" />
-            </li>
-            <li style={skillsListItems} title="Débutant">
-              <Flag name="nl" />
-            </li>
-          </ul>
-        </Menu.Item>
-      </Menu>
-      <Message
-        header="Confus ?"
-        content="Gardez votre souris sur les icônes pour plus de détails. 
-          Un clic sur les outils vous redirigera vers leurs sites webs respectifs."
-        style={skillsDescription}
-      />
-    </Jumbotron>
-  ),
-  pl: (
-    <Jumbotron style={displayContainer}>
-      <Menu vertical style={skillsMenu}>
-        <Menu.Item name="coding">
-          <Header as="h4">Kod</Header>
-          <ul style={skillsList}>
-            <li style={skillsListItems} title="React.js">
-              <Icon loading name="react" size="large" color="blue" />
-            </li>
-            <li style={skillsListItems} title="HTML5">
-              <Icon name="html5" size="large" color="red" />
-            </li>
-            <li style={skillsListItems} title="CSS3">
-              <Icon name="css3" size="large" color="blue" />
-            </li>
-            <li style={skillsListItems} title="Javascript">
-              <Icon name="js" size="large" color="yellow" />
-            </li>
-            <li style={skillsListItems} title="Node.js">
-              <Icon loading name="node js" size="large" color="green" />
-            </li>
-          </ul>
-        </Menu.Item>
-
-        <Menu.Item name="tools">
-          <Header as="h4">Narzedzia</Header>
-          <ul style={skillsList}>
-            <li style={skillsListItems}>
-              <a href="https://github.com/">Github</a>
-            </li>
-            <li style={skillsListItems}>
-              <a href="https://code.visualstudio.com/">VS Code</a>
-            </li>
-            <li style={skillsListItems}>
-              <a href="https://www.mongodb.com/">MongoDB</a>
-            </li>
-          </ul>
-        </Menu.Item>
-
-        <Menu.Item name="languages">
-          <Header as="h4">Jezyki</Header>
-          <ul style={skillsList}>
-            <li style={skillsListItems} title="Opanowany">
-              <Flag name="france" />
-            </li>
-            <li style={skillsListItems} title="Dobry poziom">
-              <Flag name="gb" />
-            </li>
-            <li style={skillsListItems} title="Jezyk ojczysty">
-              <Flag name="pl" />
-            </li>
-            <li style={skillsListItems} title="Poczatkujacy">
-              <Flag name="nl" />
-            </li>
-          </ul>
-        </Menu.Item>
-      </Menu>
-      <Message
-        header="Zmieszany ?"
-        content="Trzymaj myszkę na ikonie, aby uzyskać więcej szczegółów. Kliknięcie na narzędzia przekieruje Cię do odpowiednich stron internetowych."
-        style={skillsDescription}
-      />
-    </Jumbotron>
-  )
+  fr: {
+    coding: "Code",
+    tools: "Outils",
+    languages: "Langues",
+    flag1: "Maîtrisé",
+    flag2: "Bon niveau",
+    flag3: "Langue maternelle",
+    flag4: "Débutant",
+    msgTitle: "Confus ?",
+    msgText:
+      "Gardez votre souris sur les icônes pour plus de détails. Un clic sur les outils vous redirigera vers leurs sites webs respectifs."
+  },
+  pl: {
+    coding: "Kod",
+    tools: "Narzedzia",
+    languages: "Jezyki",
+    flag1: "Opanowany",
+    flag2: "Dobry poziom",
+    flag3: "Jezyk ojczysty",
+    flag4: "Poczatkujacy",
+    msgTitle: "Zmieszany?",
+    msgText:
+      "Trzymaj myszkę na ikonie, aby uzyskać więcej szczegółów. Kliknięcie na narzędzia przekieruje Cię do odpowiednich stron internetowych."
+  }
 };
 
 //Experience////////////////////////////////////////////////////////////////////////
@@ -229,149 +98,36 @@ export const skillsTranslate = {
 ///////////////////////////////////////////////////////////////////////////////
 
 export const experienceTranslate = {
-  fr: (
-    <Jumbotron style={displayContainer}>
-      <div style={experienceContainer}>
-        <Segment style={educationList}>
-          <List>
-            <List.Item style={educationListElements}>
-              <List.Icon name="marker" />
-              <List.Content>
-                <List.Header as="h4" style={educationHeaders}>
-                  <a href="https://www.becode.org">
-                    BeCode (Septembre 2018 – Mars 2019)
-                  </a>
-                </List.Header>
-                <List.Description>
-                  Formation en développement web et technologies numériques.
-                </List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item style={educationListElements}>
-              <List.Icon name="marker" />
-              <List.Content>
-                <List.Header as="h4" style={educationHeaders}>
-                  <a href="https://www.iepscf-uccle.be/">IEPSCF (2017-2018)</a>
-                </List.Header>
-                <List.Description>
-                  Bachelier en Informatique et Systèmes à Uccle, 80 ECTS
-                  obtenus. (un peu plus que la moitié).
-                </List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item style={educationListElements}>
-              <List.Icon name="marker" />
-              <List.Content>
-                <List.Header as="h4" style={educationHeaders}>
-                  <a href="http://www.enseignement.be/index.php?page=24797&etab_id=289">
-                    Institut René Cartigny (2016)
-                  </a>
-                </List.Header>
-                <List.Description>
-                  Secondaires de qualification à Ixelles, CESS et Qualification
-                  de Technicien en informatique obtenus.
-                </List.Description>
-              </List.Content>
-            </List.Item>
-          </List>
-        </Segment>
-
-        <Menu vertical style={experienceDiv}>
-          <Menu.Item>
-            <span style={educationHeaders}>
-              Job étudiant chez Bitler (2018)
-            </span>
-            <br />{" "}
-            <p style={educationText}>
-              <br />
-              Résolution de problèmes informatiques à domicile.
-            </p>
-          </Menu.Item>
-
-          <Menu.Item>
-            <span style={educationHeaders}>Stage chez Dubinfo (2016)</span>
-            <br />
-            <p style={educationText}>
-              <br />
-              Réparations PC/Mac et diverses interventions <br />
-              (récupération de données, installation de matériel/software).
-            </p>
-          </Menu.Item>
-        </Menu>
-      </div>
-    </Jumbotron>
-  ),
-  pl: (
-    <Jumbotron style={displayContainer}>
-      <div style={experienceContainer}>
-        <Segment style={educationList}>
-          <List>
-            <List.Item style={educationListElements}>
-              <List.Icon name="marker" />
-              <List.Content>
-                <List.Header as="h4" style={educationHeaders}>
-                  <a href="https://www.becode.org">
-                    BeCode (Wrzesien 2018 – Marzec 2019)
-                  </a>
-                </List.Header>
-                <List.Description>
-                  Szkolenie tworzenia stron internetowych i technologii
-                  cyfrowych.
-                </List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item style={educationListElements}>
-              <List.Icon name="marker" />
-              <List.Content>
-                <List.Header as="h4" style={educationHeaders}>
-                  <a href="https://www.iepscf-uccle.be/">IEPSCF (2017-2018)</a>
-                </List.Header>
-                <List.Description>
-                  Licencjat z informatyki i systemów w Uccle, 80 ECTS uzyskanych
-                  (nieco ponad połowa).
-                </List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item style={educationListElements}>
-              <List.Icon name="marker" />
-              <List.Content>
-                <List.Header as="h4" style={educationHeaders}>
-                  <a href="http://www.enseignement.be/index.php?page=24797&etab_id=289">
-                    Instytut René Cartigny (2016)
-                  </a>
-                </List.Header>
-                <List.Description>
-                  Szkoła srednia w Ixelles, CESS i uzyskanie kwalifikacji
-                  technika komputerowego.
-                </List.Description>
-              </List.Content>
-            </List.Item>
-          </List>
-        </Segment>
-
-        <Menu vertical style={experienceDiv}>
-          <Menu.Item>
-            <span style={educationHeaders}>
-              Praca studencka u Bitler (2018)
-            </span>
-            <br />{" "}
-            <p style={educationText}>
-              <br />
-              Rozwiązywanie problemów z komputerem u klientów.
-            </p>
-          </Menu.Item>
-
-          <Menu.Item>
-            <span style={educationHeaders}>Staz utilise Dubinfo (2016)</span>
-            <br />
-            <p style={educationText}>
-              <br />
-              Naprawy komputerów PC i Mac oraz różne interwencje <br />{" "}
-              (odzyskiwanie danych, instalacja sprzętu / oprogramowania).
-            </p>
-          </Menu.Item>
-        </Menu>
-      </div>
-    </Jumbotron>
-  )
+  fr: {
+    educationTitle1: "BeCode (Septembre 2018 – Mars 2019)",
+    educationText1:
+      "Formation en développement web et technologies numériques.",
+    educationTitle2: "IEPSCF (2017-2018)",
+    educationText2:
+      "Bachelier en Informatique et Systèmes à Uccle, 80 ECTS obtenus (un peu plus que la moitié).",
+    educationTitle3: "Institut René Cartigny (2016)",
+    educationText3:
+      "Secondaires de qualification à Ixelles, CESS et Qualification de Technicien en informatique obtenus.",
+    jobTitle1: "Job étudiant chez Bitler (2018)",
+    jobText1: "Résolution de problèmes informatiques à domicile.",
+    jobTitle2: "Stage chez Dubinfo (2016)",
+    jobText2:
+      "Réparations PC/Mac et diverses interventions (récupération de données, installation de matériel/software)."
+  },
+  pl: {
+    educationTitle1: "BeCode (Wrzesien 2018 – Marzec 2019)",
+    educationText1:
+      "Szkolenie tworzenia stron internetowych i technologii cyfrowych.",
+    educationTitle2: "IEPSCF (2017-2018)",
+    educationText2:
+      "Licencjat z informatyki i systemów w Uccle, 80 ECTS uzyskanych (nieco ponad połowa).",
+    educationTitle3: "Instytut René Cartigny (2016)",
+    educationText3:
+      "Szkoła srednia w Ixelles, CESS i uzyskanie kwalifikacji technika komputerowego.",
+    jobTitle1: "Praca studencka w firmie Bitler(2018)",
+    jobText1: "Rozwiązywanie problemów z komputerem u klientów.",
+    jobTitle2: "Staz u Dubinfo (2016)",
+    jobText2:
+      "Naprawy komputerów PC i Mac oraz różne interwencje (odzyskiwanie danych, instalacja sprzętu / oprogramowania)."
+  }
 };
